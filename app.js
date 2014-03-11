@@ -7,6 +7,9 @@ var express = require('express');
 var routes = require('./routes/index.js');
 var http = require('http');
 var path = require('path');
+var sass = require('node-sass');
+
+
 
 
 var app = express();
@@ -21,6 +24,13 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
+app.use(
+	sass.middleware({
+		src: __dirname + '/public',
+		dest: __dirname + '/public/assets',
+		debug: true
+	})
+);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
