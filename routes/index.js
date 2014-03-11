@@ -1,10 +1,9 @@
 
 
-var twilio_sid = 'AC25647fb4a28c21289868fe76c460e31b';
-var twilio_auth = 'bdffa28a393c098b10a887e05b22e89b';
+var twilio_credentials = require('../twilio_credentials.json');
 
 var twilio = require('twilio');
-var client = new twilio.RestClient(twilio_sid, twilio_auth);
+var client = new twilio.RestClient(twilio_credentials.twilio_sid, twilio_credentials.twilio_auth);
 
 var messages = [];
 
