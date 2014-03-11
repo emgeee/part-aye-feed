@@ -13,9 +13,17 @@ angular.module('PartyApp', [
 
 angular.module('PartyApp').controller('PartyCtrl', [
 '$scope',
-function($scope){
+'$http',
+'$interval',
+function($scope, $http, $interval){
 
-	$scope.test = "party!";
+	$scope.messages = [];
+
+	$interval(function(){
+		$http.get('/retrieve_messages').success(function(data){
+			$scope.messages = data.concat($scope.messages);
+		});
+	}, 5000);
 
 
 

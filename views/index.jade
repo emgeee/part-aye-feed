@@ -9,5 +9,8 @@ html
 			script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js')
 			script(src='Part-aye.js')
 		body(ng-app='PartyApp', ng-controller='PartyCtrl')
-			| It's a
-			| {{test}}
+
+			ul
+				li(ng-repeat="m in messages")
+					{{m.Body}}
+
