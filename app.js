@@ -28,6 +28,8 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/receive_message', routes.receive_message);
+app.get('/retrieve_messages', routes.retrieve_messages);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
