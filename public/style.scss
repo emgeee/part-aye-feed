@@ -1,10 +1,20 @@
+
+
+
+$orange: #FF5F00;
+$backgroundColor: #000000;
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: $backgroundColor;
 }
 
 
 #message-list{
+	color: #ececec;
+	font-size: 48px;
+
 	&>li{
 		min-height: 20px;
 		padding: 20px;
@@ -14,5 +24,12 @@ body {
 
 		text-align:center;
 
+		&:nth-child(even){
+			background-color: $orange;
+		}
+		&:nth-child(odd){
+			background-color: lighten($orange, 15%);
+		}
 	}
+
 }
