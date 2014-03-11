@@ -33,3 +33,38 @@ body {
 	}
 
 }
+
+
+.message.ng-enter,
+.message.ng-leave,
+.message.ng-move {
+	-webkit-transition: 0.5s linear all;
+	-moz-transition: 0.5s linear all;
+	-o-transition: 0.5s linear all;
+	transition: 0.5s linear all;
+}
+ 
+.message.ng-enter,
+.message.ng-move {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+ 
+.message.ng-move.ng-move-active,
+.message.ng-enter.ng-enter-active {
+	opacity: 1;
+	height: 120px;
+}
+ 
+.message.ng-leave {
+	opacity: 1;
+	overflow: hidden;
+}
+ 
+.message.ng-leave.ng-leave-active {
+	opacity: 0;
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
