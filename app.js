@@ -27,10 +27,11 @@ app.use(app.router);
 app.use(
 	sass.middleware({
 		src: __dirname + '/public',
-		dest: __dirname + '/public/assets',
+		dest: __dirname + '/public',
 		debug: true
 	})
 );
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
