@@ -1,68 +1,56 @@
 
 
-
 $orange: #FF5F00;
-$backgroundColor: #000000;
 
 body {
 	padding: 50px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: $backgroundColor;
-}
 
-
-#message-list{
-	color: #ececec;
-	font-size: 48px;
-
-	&>li{
-		min-height: 20px;
-		padding: 20px;
-		margin-bottom: 20px;
-		background-color: #f5f5f5;
-		border: 1px solid #e3e3e3;
-
-		text-align:center;
-
-		&:nth-child(even){
-			background-color: $orange;
-		}
-		&:nth-child(odd){
-			background-color: lighten($orange, 15%);
-		}
-	}
+	background: #0f060f; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0f060f 0%, #4f4739 67%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0f060f), color-stop(67%,#4f4739)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #0f060f 0%,#4f4739 67%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #0f060f 0%,#4f4739 67%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #0f060f 0%,#4f4739 67%); /* IE10+ */
+	background: linear-gradient(to bottom,  #0f060f 0%,#4f4739 67%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f060f', endColorstr='#4f4739',GradientType=0 ); /* IE6-9 */
 
 }
 
+.message.well {
+	text-align:center;
+	font-size: 36px;
+	background-color: #dbdbdb;
+}
 
-.message.ng-enter,
-.message.ng-leave,
-.message.ng-move {
+.messages.ng-enter,
+.messages.ng-leave,
+.messages.ng-move {
 	-webkit-transition: 0.5s linear all;
 	-moz-transition: 0.5s linear all;
 	-o-transition: 0.5s linear all;
 	transition: 0.5s linear all;
 }
- 
-.message.ng-enter,
-.message.ng-move {
+
+.messages.ng-enter,
+.messages.ng-move {
 	opacity: 0;
 	height: 0;
 	overflow: hidden;
 }
  
-.message.ng-move.ng-move-active,
-.message.ng-enter.ng-enter-active {
+.messages.ng-move.ng-move-active,
+.messages.ng-enter.ng-enter-active {
 	opacity: 1;
 	height: 120px;
 }
  
-.message.ng-leave {
+.messages.ng-leave {
 	opacity: 1;
 	overflow: hidden;
 }
  
-.message.ng-leave.ng-leave-active {
+.messages.ng-leave.ng-leave-active {
 	opacity: 0;
 	height: 0;
 	padding-top: 0;
