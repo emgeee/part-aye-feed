@@ -82,7 +82,7 @@ function($scope, $http, $interval){
 
 	$interval(function(){
 		$http.get('/retrieve_messages').success(function(data){
-			$scope.messages = data.concat($scope.messages);
+			$scope.messages = $scope.messages;
 		});
 	}, 5000);
 

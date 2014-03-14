@@ -16,10 +16,7 @@ exports.receive_message = function(req, res){
 };
 
 exports.retrieve_messages = function(req, res){
-	var m = messages;
-	messages = [];
-
-	return res.json(m);
+	return res.json(messages);
 };
 
 
