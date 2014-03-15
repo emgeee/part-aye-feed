@@ -21,10 +21,10 @@ html
 				div(class='col-md-8 col-md-offset-2')
 
 					div.phone
-						| Text <insert phone number here>.
+						| Text (insert phone number here).
 
 			div(class='row' ng-repeat="m in messages | filter:{Body: search}" class="message")
 				div(class='col-md-8 col-md-offset-2')
 					div(class='message well')
-						{{m.Body}}
+						| {{m.Body}}
 
