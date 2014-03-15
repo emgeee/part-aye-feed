@@ -4,6 +4,7 @@ $orange: #FF5F00;
 
 body {
 	padding: 50px;
+	padding-top: 20px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 
 	background: #0f060f; /* Old browsers */
@@ -17,10 +18,19 @@ body {
 
 }
 
+.phone {
+	font-size: 36px;
+	padding: 10px;
+	margin-bottom: 20px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 25px;
+}
 .message.well {
 	text-align:center;
 	font-size: 36px;
-	background-color: #dbdbdb;
+	background-color: rgba(255,255,255,0.75);
 }
 
 .messages.ng-enter,
